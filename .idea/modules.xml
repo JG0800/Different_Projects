@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AStarAlgorithm/AStarAlgorithm.iml" filepath="$PROJECT_DIR$/AStarAlgorithm/AStarAlgorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/Different_Projects.iml" filepath="$PROJECT_DIR$/Different_Projects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/My2DGame/My2DGame.iml" filepath="$PROJECT_DIR$/My2DGame/My2DGame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Snake/Snake.iml" filepath="$PROJECT_DIR$/Snake/Snake.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Zahlen_Raten/Zahlen_Raten.iml" filepath="$PROJECT_DIR$/Zahlen_Raten/Zahlen_Raten.iml" />
     </modules>
   </component>
 </project>
