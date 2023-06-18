@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/Different_Projects.iml" filepath="$PROJECT_DIR$/Different_Projects.iml" />
       <module fileurl="file://$PROJECT_DIR$/My2DGame/My2DGame.iml" filepath="$PROJECT_DIR$/My2DGame/My2DGame.iml" />
       <module fileurl="file://$PROJECT_DIR$/Snake/Snake.iml" filepath="$PROJECT_DIR$/Snake/Snake.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SnakeAI/SnakeAI.iml" filepath="$PROJECT_DIR$/SnakeAI/SnakeAI.iml" />
       <module fileurl="file://$PROJECT_DIR$/Zahlen_Raten/Zahlen_Raten.iml" filepath="$PROJECT_DIR$/Zahlen_Raten/Zahlen_Raten.iml" />
     </modules>
   </component>

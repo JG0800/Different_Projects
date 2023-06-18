@@ -2,10 +2,10 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class KeyHandler implements KeyListener {
-    DemoPanel dp;
+    SnakeAIPanel dp;
 
 
-    public KeyHandler(DemoPanel dp){
+    public KeyHandler(SnakeAIPanel dp){
         this.dp = dp;
     }
 
@@ -19,9 +19,6 @@ public class KeyHandler implements KeyListener {
         int code = e.getKeyCode();
         if (e.getKeyCode() == 32){
             dp.autoSearch();
-        }
-        else if (e.getKeyCode() == KeyEvent.VK_F){
-            dp.restart();
         }
     }
 
