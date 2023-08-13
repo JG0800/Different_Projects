@@ -20,6 +20,7 @@ public class DemoPanel extends JPanel {
 
     //OTHERS
     boolean goalReached = false;
+    boolean startSet = false;
 
     public DemoPanel(){
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
@@ -36,6 +37,7 @@ public class DemoPanel extends JPanel {
         while(col < maxCol && row < maxRow){
             node[col][row] = new Node(col, row, this);
             this.add(node[col][row]);
+
             col++;
             if (col == maxCol){
                 col = 0;
@@ -96,15 +98,19 @@ public class DemoPanel extends JPanel {
     }
 
     public void autoSearch(){
+
         try {
 
-            while (goalReached == false) {
-                int col = currentNode.col; //3, because its right now the startNode
-                int row = currentNode.row; //7
+            if (goalReached == false) {
+                int col = currentNode.col; //5, because its right now the startNode
+                int row = currentNode.row; //16
 
                 currentNode.setAsChecked();
                 checkedList.add(currentNode);
                 openList.remove(currentNode);
+
+
+
 
                     //OPEN THE UP NODE
                     if (row - 1 >= 0) {
@@ -193,7 +199,7 @@ public class DemoPanel extends JPanel {
     }
     public void restart(){
         int col = 0;
-        int row = 0;
+        int row = 0;;
 
         while (col < maxCol && row < maxRow) {
             if (node[col][row] != startNode && node[col][row] != goalNode && node[col][row].solid == false)

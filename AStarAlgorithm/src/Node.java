@@ -17,6 +17,7 @@ public class Node extends JButton implements ActionListener {
     boolean solid;
     boolean open;
     boolean checked;
+    boolean empty;
 
     public Node (int col, int row, DemoPanel dp){
         this.dp = dp;
@@ -27,10 +28,20 @@ public class Node extends JButton implements ActionListener {
         addActionListener(this);
     }
 
+    public void setAsEmpty(){
+        setBackground(Color.white);
+        setForeground(Color.black);
+        start = false;
+        solid = false;
+        goal = false;
+        empty = true;
+    }
+
     public void setAsStart() {
         setBackground(Color.blue);
         setForeground(Color.white);
         start = true;
+        dp.startSet = true;
     }
 
     public void setAsGoal() {
@@ -52,6 +63,7 @@ public class Node extends JButton implements ActionListener {
         if (start == false && goal ==false){
             setBackground(Color.orange);
             setForeground(Color.black);
+            dp.repaint();
             }
     checked = true;
     }
@@ -62,12 +74,11 @@ public class Node extends JButton implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (start == true ){
-            dp.autoSearch();
+            setAsEmpty();
+
         }
-        else if(solid == true){
-            setBackground(Color.white);
-            setForeground(Color.black);
-            solid = false;
+        else if(solid == true) {
+            setAsEmpty();
         }
         else if(goal == true){
             dp.restart();
@@ -75,6 +86,10 @@ public class Node extends JButton implements ActionListener {
         else if (goal == false){
             setAsSolid();
         }
+        else if (empty == true){
+            setAsStart();
+        }
         dp.requestFocusInWindow();
     }
+
 }
